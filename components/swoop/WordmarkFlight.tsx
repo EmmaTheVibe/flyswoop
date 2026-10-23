@@ -84,7 +84,7 @@ export default function WordmarkFlight() {
       </span>
       <p
         ref={cornerRef}
-        className={`fixed top-5 left-6 z-10 md:top-8 md:left-16 motion-reduce:opacity-100! ${WORDMARK_PILL} ${WORDMARK_CORNER_SIZE}`}
+        className={`fixed top-(--inset-t) left-(--inset-l) z-10 motion-reduce:opacity-100! ${WORDMARK_PILL} ${WORDMARK_CORNER_SIZE}`}
         style={{ opacity: 0 }}
       >
         Swoop

@@ -26,6 +26,6 @@ export const REDUCED = {
 
 export function headingClasses(hero = false) {
   return `font-display font-normal text-balance [text-shadow:0_2px_28px_rgb(11_15_25/0.45)] ${
-    hero ? "text-5xl leading-[1.02] md:text-8xl" : "text-4xl leading-[1.08] md:text-6xl"
+    hero ? "text-5xl leading-[1.02] md:text-8xl short:text-4xl" : "text-4xl leading-[1.08] md:text-6xl short:text-3xl"
   }`;
 }

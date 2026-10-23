@@ -48,7 +48,7 @@ export default function FlythroughSection({
       style={{ "--flythrough-length": `${timeline.total}vh` } as CSSProperties}
       className={`relative h-(--flythrough-length) ${REDUCED.wrapper}`}
     >
-      <div className={`sticky top-0 h-svh w-full overflow-hidden bg-black ${REDUCED.stage}`}>
+      <div className={`sticky top-0 h-lvh w-full overflow-hidden bg-black ${REDUCED.stage}`}>
         <Poster clip={clips[0]} />
         <canvas
           ref={canvasRef}

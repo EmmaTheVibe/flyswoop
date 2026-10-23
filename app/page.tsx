@@ -8,7 +8,7 @@ export default function Home() {
     <main className="font-sans">
       <a
         href="#"
-        className="fixed top-5 right-6 z-10 flex size-11 items-center justify-center rounded-full bg-accent text-foreground transition-transform hover:scale-105 active:scale-95 md:top-8 md:right-16 md:size-auto md:px-5 md:py-2.5 md:text-base md:font-medium"
+        className="fixed top-(--inset-t) right-(--inset-r) z-10 flex size-11 items-center justify-center rounded-full bg-accent text-foreground transition-transform hover:scale-105 active:scale-95 md:size-auto md:px-5 md:py-2.5 md:text-base md:font-medium"
       >
         <svg
           width="20"

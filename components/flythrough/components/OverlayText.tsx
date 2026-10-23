@@ -13,7 +13,7 @@ export default function OverlayText({ overlay, initialProgress, textRef }: Overl
   const Heading = overlay.hero ? "h1" : "h2";
   return (
     <div
-      className={`pointer-events-none absolute inset-0 flex px-6 md:px-16 ${TEXT_POSITION_CLASSES[overlay.position]} ${REDUCED.layer}`}
+      className={`pointer-events-none absolute inset-0 z-2 flex pr-(--inset-r) pl-(--inset-l) ${TEXT_POSITION_CLASSES[overlay.position]} ${REDUCED.layer}`}
     >
       <div
         ref={textRef}
@@ -22,7 +22,7 @@ export default function OverlayText({ overlay, initialProgress, textRef }: Overl
         data-reveal={overlay.product ? "out" : undefined}
       >
         {overlay.stamp && (
-          <p className="mb-4 text-sm md:text-base">
+          <p className="mb-4 text-sm md:text-base short:mb-2">
             <span
               className={`inline-block font-medium text-accent tabular-nums ${overlay.product ? "reveal-type" : ""}`}
               style={{ "--chars": overlay.stamp.length } as CSSProperties}
@@ -36,7 +36,7 @@ export default function OverlayText({ overlay, initialProgress, textRef }: Overl
         ) : (
           overlay.title && <Heading className={headingClasses(overlay.hero)}>{overlay.title}</Heading>
         )}
-        {overlay.body && <p className="mt-5 text-base leading-relaxed text-foreground/80 md:text-lg">{overlay.body}</p>}
+        {overlay.body && <p className="mt-5 text-base leading-relaxed text-foreground/80 md:text-lg short:mt-3">{overlay.body}</p>}
         {overlay.content}
       </div>
     </div>

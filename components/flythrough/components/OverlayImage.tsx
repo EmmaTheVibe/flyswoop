@@ -12,7 +12,7 @@ type OverlayImageProps = {
 export default function OverlayImage({ overlay, initialProgress, imageRef }: OverlayImageProps) {
   return (
     <div
-      className={`pointer-events-none absolute inset-0 flex px-6 ${IMAGE_POSITION_CLASSES[overlay.position]} ${REDUCED.layer}`}
+      className={`pointer-events-none absolute inset-0 z-1 flex pr-(--inset-r) pl-(--inset-l) ${IMAGE_POSITION_CLASSES[overlay.position]} ${REDUCED.layer}`}
     >
       <div
         ref={imageRef}
@@ -24,7 +24,7 @@ export default function OverlayImage({ overlay, initialProgress, imageRef }: Ove
           alt={overlay.image.alt}
           sizes="(min-width: 768px) 38vw, 78vw"
           loading="eager"
-          className="h-auto w-[78vw] max-w-md drop-shadow-[0_24px_32px_rgb(11_15_25/0.45)] md:w-[38vw] md:max-w-2xl"
+          className="h-auto max-h-[42svh] w-auto max-w-[min(78vw,28rem)] drop-shadow-[0_24px_32px_rgb(11_15_25/0.45)] md:max-h-[62svh] md:max-w-[min(38vw,42rem)]"
         />
       </div>
     </div>

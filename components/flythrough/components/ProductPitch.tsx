@@ -8,7 +8,7 @@ type Product = NonNullable<Overlay["product"]>;
 export default function ProductPitch({ product }: { product: Product }) {
   return (
     <>
-      <p className="mb-2 text-lg leading-snug text-foreground/90 [text-shadow:0_1px_16px_rgb(11_15_25/0.5)] md:text-xl">
+      <p className="mb-2 text-lg leading-snug text-foreground/90 [text-shadow:0_1px_16px_rgb(11_15_25/0.5)] md:text-xl short:mb-1 short:text-base">
         <span className="reveal-bar" style={{ "--bar": "var(--foreground)", "--from": "right" } as CSSProperties}>
           {product.lead}
         </span>

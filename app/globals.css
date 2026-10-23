@@ -1,8 +1,29 @@
 @import "tailwindcss";
 
+@custom-variant short (@media (max-height: 520px));
+
 :root {
   --background: #0b0f19;
   --foreground: #f8fafc;
+  --inset-t: max(1.25rem, env(safe-area-inset-top));
+  --inset-l: max(1.5rem, env(safe-area-inset-left));
+  --inset-r: max(1.5rem, env(safe-area-inset-right));
+}
+
+@media (min-width: 768px) {
+  :root {
+    --inset-t: max(2rem, env(safe-area-inset-top));
+    --inset-l: max(4rem, env(safe-area-inset-left));
+    --inset-r: max(4rem, env(safe-area-inset-right));
+  }
+}
+
+@media (min-width: 768px) and (max-height: 520px) {
+  :root {
+    --inset-t: max(1rem, env(safe-area-inset-top));
+    --inset-l: max(2rem, env(safe-area-inset-left));
+    --inset-r: max(2rem, env(safe-area-inset-right));
+  }
 }
 
 @theme inline {
