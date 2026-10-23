@@ -1,9 +1,9 @@
 import { useCallback, useEffect, useRef } from "react";
 import { MOBILE_QUERY, REDUCED_MOTION_QUERY, type Clip } from "../lib/frames";
-import { createFrameScheduler, type FrameScheduler, type FrameStore } from "../lib/frameScheduler";
+import { createFrameScheduler, EMPTY_STORE, type FrameScheduler, type FrameStore } from "../lib/frameScheduler";
 
 export function useImageSequence(clips: Clip[]) {
-  const frames = useRef<FrameStore>([]);
+  const frames = useRef<FrameStore>(EMPTY_STORE);
   const scheduler = useRef<FrameScheduler | null>(null);
   const setFocus = useCallback((clip: number, frame: number) => scheduler.current?.setFocus(clip, frame), []);
 
@@ -16,7 +16,7 @@ export function useImageSequence(clips: Clip[]) {
       scheduler.current = reducedMotion.matches
         ? null
         : createFrameScheduler(clips, mobile.matches ? "mobile" : "desktop");
-      frames.current = scheduler.current?.frames ?? [];
+      frames.current = scheduler.current?.frames ?? EMPTY_STORE;
     };
 
     restart();

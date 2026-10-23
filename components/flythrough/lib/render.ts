@@ -1,5 +1,5 @@
 import { drawCover } from "./drawCover";
-import { nearestFrame, type FrameStore } from "./frameScheduler";
+import { pickFrame, type FrameStore } from "./frameScheduler";
 import type { FrameRef, Scene } from "./timeline";
 import { drawWhip } from "./whip";
 
@@ -12,11 +12,11 @@ export function focusOf(scene: Scene): FrameRef {
 
 export function resolveScene(scene: Scene, frames: FrameStore): Drawn | null {
   if (scene.kind === "frame") {
-    const a = nearestFrame(frames[scene.at.clip], scene.at.frame);
+    const a = pickFrame(frames, scene.at.clip, scene.at.frame);
     return a ? { a, t: 0 } : null;
   }
-  const a = nearestFrame(frames[scene.from.clip], scene.from.frame);
-  const b = nearestFrame(frames[scene.to.clip], scene.to.frame);
+  const a = pickFrame(frames, scene.from.clip, scene.from.frame);
+  const b = pickFrame(frames, scene.to.clip, scene.to.frame);
   if (a && b) return { a, b, t: scene.t };
   const either = a ?? b;
   return either ? { a: either, t: 0 } : null;
