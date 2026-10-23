@@ -1,0 +1,16 @@
+{
+  "version": "v20261023095111",
+  "frameCount": 80,
+  "format": "avif",
+  "source": "intro-descent.mp4",
+  "variants": {
+    "desktop": {
+      "width": 1920,
+      "height": 1080
+    },
+    "mobile": {
+      "width": 606,
+      "height": 1080
+    }
+  }
+}

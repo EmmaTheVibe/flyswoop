@@ -1,0 +1,16 @@
+{
+  "version": "v20261023095153",
+  "frameCount": 70,
+  "format": "avif",
+  "source": "mountain-flythrough.mp4",
+  "variants": {
+    "desktop": {
+      "width": 1920,
+      "height": 1012
+    },
+    "mobile": {
+      "width": 568,
+      "height": 1012
+    }
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "version": "v20261023084415",
+  "frameCount": 99,
+  "format": "avif",
+  "source": "city-flythrough-2.mp4",
+  "variants": {
+    "desktop": {
+      "width": 1920,
+      "height": 1080
+    },
+    "mobile": {
+      "width": 606,
+      "height": 1080
+    }
+  }
+}

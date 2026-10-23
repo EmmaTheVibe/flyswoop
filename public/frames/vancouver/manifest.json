@@ -1,0 +1,16 @@
+{
+  "version": "v20261022222755",
+  "frameCount": 110,
+  "format": "avif",
+  "source": "city-flythrough.webm (frames 1–110)",
+  "variants": {
+    "desktop": {
+      "width": 1920,
+      "height": 1080
+    },
+    "mobile": {
+      "width": 606,
+      "height": 1080
+    }
+  }
+}
