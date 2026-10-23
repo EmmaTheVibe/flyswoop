@@ -16,7 +16,7 @@ const bricolage = Bricolage_Grotesque({
 
 export const metadata: Metadata = {
   title: "Swoop",
-  description: "Better from up here. Shot on Swoop One.",
+  description: "Every great shot starts at Swoop. Your No. 1 source for the best camera drones.",
 };
 
 export const viewport: Viewport = {
